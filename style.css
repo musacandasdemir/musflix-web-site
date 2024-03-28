@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
+
+/*! css başlangıç */
+/* Google fontları içe aktarıldı */
+
+* {
+  margin: 0; /* Tüm elementlerin dış kenar boşluğu sıfırlandı */
+}
+
+body {
+  font-family: "Electrolize", sans-serif; /* Sayfa yazı fontu ayarlandı */
+}
+
+.container {
+  background-color: black; /* Konteyner arka plan rengi */
+  color: white; /* Konteyner metin rengi */
+}
+
+/*! base css end */
+
+/*! navbar start */
+/* Navbar stilleri başlangıcı */
+
+.navbar {
+  background-color: black; /* Navbar arka plan rengi */
+  height: 50px; /* Navbar yüksekliği */
+  color: white; /* Navbar metin rengi */
+  position: sticky; /* Navbar yapışkan konumlandırıldı */
+  top: 0; /* Navbar'ın üst kenarı ekranın üstüne yapıştırıldı */
+  z-index: 1; /* Navbar diğer elementlerin önünde kalacak şekilde en üst sıraya getirildi */
+}
+
+.navbar-wrapper {
+  display: flex; /* Flex konteyneri */
+  justify-content: space-between; /* İçerikleri arasında boşluk bırak */
+  align-items: center; /* İçerikleri dikeyde hizala */
+  height: 100%; /* Yükseklik 100% */
+  padding: 0 50px; /* Kenarlardan içeri girinti */
+}
+
+.logo {
+  font-size: 30px; /* Logo yazı boyutu */
+  color: rgb(255, 70, 70); /* Logo rengi */
+}
+
+.menu-list {
+  display: flex; /* Flex konteyneri */
+  list-style: none; /* Liste işaretleri gizlendi */
+  column-gap: 30px; /* Sütunlar arası boşluk */
+  padding: 0; /* İç kenar boşluğu sıfırlandı */
+}
+
+.menu-list-item {
+  cursor: pointer; /* Fare işareti */
+}
+
+.menu-list-item:hover {
+  font-weight: bold; /* Menü öğesi üzerine gelindiğinde metin kalınlaştırıldı */
+}
+
+.menu-list-item.active {
+  font-weight: bold; /* Aktif menü öğesi kalınlaştırıldı */
+}
+
+.profile-container {
+  display: flex; /* Flex konteyneri */
+  align-items: center; /* İçerikleri dikeyde hizala */
+  column-gap: 20px; /* Sütunlar arası boşluk */
+}
+
+.profile-picture {
+  width: 32px; /* Resim genişliği */
+  height: 32px; /* Resim yüksekliği */
+  object-fit: cover; /* Resim boyutlandırması */
+  border-radius: 50%; /* Kenar yarıçapı */
+}
+
+.profile-text-container {
+  display: flex; /* Flex konteyneri */
+  align-items: center; /* İçerikleri dikeyde hizala */
+  column-gap: 5px; /* Sütunlar arası boşluk */
+  line-height: 1; /* Satır yüksekliği */
+}
+
+.toggle {
+  width: 40px; /* Genişlik */
+  height: 20px; /* Yükseklik */
+  background-color: white; /* Arka plan rengi */
+  position: relative; /* Göreceli konumlandırma */
+  border-radius: 30px; /* Kenar yarıçapı */
+  display: flex; /* Flex konteyneri */
+  align-items: center; /* İçerikleri dikeyde hizala */
+  justify-content: space-around; /* İçerikleri yatayda hizala */
+}
+
+.toggle-icon {
+  color: goldenrod; /* Simge rengi */
+}
+
+.toggle-ball {
+  width: 18px; /* Genişlik */
+  height: 18px; /* Yükseklik */
+  background-color: black; /* Arka plan rengi */
+  border-radius: 50%; /* Kenar yarıçapı */
+  cursor: pointer; /* Fare işareti */
+  position: absolute; /* Mutlak konumlandırma */
+  right: 1px; /* Sağdan içe boşluk */
+  transition: 0.5s ease all; /* Geçiş efekti */
+}
+
+/*! navbar end */
+
+/*! sidebar start */
+/* Kenar çubuğu stilleri başlangıcı */
+
+.sidebar {
+  background-color: black; /* Kenar çubuğu arka plan rengi */
+  color: white; /* Kenar çubuğu metin rengi */
+  height: 100%; /* Yükseklik 100% */
+  width: 50px; /* Genişlik */
+  display: flex; /* Flex konteyneri */
+  flex-direction: column; /* Sütun yönlendirmesi */
+  align-items: center; /* İçerikleri dikeyde hizala */
+  padding-top: 60px; /* Üst kenardan içeri girinti */
+  row-gap: 40px; /* Satırlar arası boşluk */
+  position: fixed; /* Sabit konumlandırma */
+  top: 0; /* Üst kenardan başla */
+}
+
+.sidebar i {
+  color: white; /* Simge rengi */
+  font-size: 20px; /* Simge boyutu */
+  cursor: pointer; /* Fare işareti */
+}
+/*! sidebar end */
+
+/* İçerik bölgesi stilleri başlangıcı */
+.content-wrapper {
+  margin-left: 50px; /* Sol kenardan içeri girinti */
+}
+
+.featured-content {
+  background: url("img/spiderman.jpg"); /* Arka plan resmi */
+  padding: 50px; /* İç kenar boşluğu */
+  height: calc(100vh - 160px); /* Yükseklik hesaplaması */
+  background-size: 100% 100%; /* Arka plan resmi boyutlandırması */
+}
+
+.featured-title {
+  width: 400px; /* Genişlik */
+}
+
+.featured-desc {
+  width: 500px; /* Genişlik */
+  background-color: rgba(255, 255, 255, 0.5); /* Arka plan rengi (saydam) */
+  padding: 10px; /* İç kenar boşluğu */
+  margin: 30px 0; /* Kenarlardan içeri girinti */
+  color: black; /* Metin rengi */
+}
+
+.featured-buttons {
+  display: flex; /* Flex konteyneri */
+  gap: 20px; /* Boşluk */
+  flex-wrap: wrap; /* Sarmalama */
+}
+
+.featured-buttons button {
+  padding: 10px 25px; /* Düğme iç kenar boşluğu */
+  border-radius: 2px; /* Kenar yarıçapı */
+  border: none; /* Kenar çizgisi yok */
+  outline: none; /* Dış kenar boşluğu yok */
+  cursor: pointer; /* Fare işareti */
+  display: flex; /* Flex konteyneri */
+  column-gap: 10px; /* Sütunlar arası boşluk */
+  font-size: 16px; /* Yazı boyutu */
+  font-weight: bold; /* Yazı kalınlığı */
+}
+
+.featured-buttons .info {
+  background-color: rgba(145, 142, 142, 0.5); /* Arka plan rengi (saydam) */
+  color: white; /* Metin rengi */
+}
+
+.movie-list-filter {
+  margin: 20px 0 20px 50px; /* Dış kenar boşluğu */
+  padding: 20px; /* İç kenar boşluğu */
+}
+
+.movie-list-filter select {
+  background-color: black; /* Arka plan rengi */
+  color: white; /* Metin rengi */
+  padding: 7px 0px; /* İç kenar boşluğu */
+  width: 125px; /* Genişlik */
+}
+
+.menu-list-container {
+  margin-left: 70px; /* Sol kenardan içeri girinti */
+}
+
+.movie-list {
+  list-style: none; /* Liste işaretleri gizlendi */
+  padding: 0; /* İç kenar boşluğu sıfırlandı */
+  height: 300px; /* Yükseklik */
+  display: flex; /* Flex konteyneri */
+  align-items: center; /* İçerikleri dikeyde hizala */
+  column-gap: 30px; /* Sütunlar arası boşluk */
+  transform: translateX(0); /* Yatay eksende kaydırma sıfırlandı */
+  transition: 1s all ease-in-out; /* Geçiş efekti */
+}
+
+.movie-list-wrapper {
+  overflow: hidden; /* Taşma işlemleri gizlendi */
+  position: relative; /* Göreceli konumlandırma */
+}
+
+.movie-item {
+  position: relative; /* Göreceli konumlandırma */
+}
+
+.movie-item:hover .movie-item-title,
+.movie-item:hover .movie-item-buttons {
+  opacity: 1; /* Geçiş efekti */
+}
+
+.movie-item:hover .movie-item-img {
+  transform: scale(1.2); /* Ölçekleme */
+  margin: 0 30px; /* Kenarlardan içeri girinti */
+  opacity: 0.5; /* Saydamlık */
+}
+
+.movie-item-img {
+  width: 270px; /* Genişlik */
+  height: 200px; /* Yükseklik */
+  object-fit: cover; /* Resim boyutlandırması */
+  transition: 1s all ease-in-out; /* Geçiş efekti */
+}
+
+.movie-item-title {
+  background-color: rgb(40, 40, 40, 0.4); /* Arka plan rengi (saydam) */
+  padding: 10px; /* İç kenar boşluğu */
+  font-size: 28px; /* Yazı boyutu */
+  font-weight: bold; /* Yazı kalınlığı */
+  position: absolute; /* Mutlak konumlandırma */
+  top: 10%; /* Üst kenardan içeri girinti */
+  left: 50px; /* Sol kenardan içeri girinti */
+  opacity: 0; /* Saydamlık */
+  transition: 1s all ease-in-out; /* Geçiş efekti */
+}
+
+.movie-item-buttons {
+  background-color: rgb(40, 40, 40, 0.4); /* Arka plan rengi (saydam) */
+  padding: 0 10px; /* İç kenar boşluğu */
+  font-weight: bold; /* Yazı kalınlığı */
+  position: absolute; /* Mutlak konumlandırma */
+  bottom: 10%; /* Alt kenardan içeri girinti */
+  left: 50px; /* Sol kenardan içeri girinti */
+  display: flex; /* Flex konteyneri */
+  column-gap: 20px; /* Sütunlar arası boşluk */
+  opacity: 0; /* Saydamlık */
+  transition: 1s all ease; /* Geçiş efekti */
+}
+
+.movie-item-buttons i {
+  cursor: pointer; /* Fare işareti */
+  opacity: 0.5; /* Saydamlık */
+  font-size: 20px; /* Yazı boyutu */
+  transition: 0.5s all ease; /* Geçiş efekti */
+}
+
+.movie-item-buttons i:hover {
+  opacity: 1; /* Geçiş efekti */
+}
+
+.arrow {
+  width: 100px; /* Genişlik */
+  display: flex; /* Flex konteyneri */
+  font-size: 120px; /* Yazı boyutu */
+  position: absolute; /* Mutlak konumlandırma */
+  right: 0; /* Sağ kenardan içeri girinti */
+  top: 100px; /* Üst kenardan içeri girinti */
+  opacity: 0.5; /* Saydamlık */
+  transition: 0.5s ease all; /* Geçiş efekti */
+  cursor: pointer; /* Fare işareti */
+}
+
+.arrow.hover {
+  opacity: 1; /* Geçiş efekti */
+}
+
+.container.active {
+  background-color: white; /* Aktif konteyner arka plan rengi */
+}
+
+.navbar.active {
+  background-color: white; /* Aktif navbar arka plan rengi */
+  color: black; /* Aktif navbar metin rengi */
+}
+
+.sidebar.active {
+  background-color: white; /* Aktif kenar çubuğu arka plan rengi */
+}
+
+.sidebar i.active {
+  color: black; /* Aktif simge rengi */
+}
+
+.movie-list-title.active {
+  color: black; /* Aktif film listesi başlığı metin rengi */
+}
+
+.toggle.active {
+  background-color: black; /* Aktif anahtar arka plan rengi */
+}
+
+.toggle-ball.active {
+  background-color: white; /* Aktif anahtar topu arka plan rengi */
+  transform: translateX(-20px); /* X ekseninde kaydırma */
+}
+
+.movie-list-filter select.active {
+  background-color: white; /* Aktif film listesi filtre seçeneği arka plan rengi */
+  color: black; /* Aktif film listesi filtre seçeneği metin rengi */
+}
+
+@media only screen and (max-width: 800px) {
+  /* Sadece 800 piksel genişlikte ekranlar için medya sorgusu */
+  .menu-container {
+    display: none; /* Menü konteyneri gizlendi */
+  }
+
+  .featured-content {
+    height: 50vh; /* Öne çıkan içerik yüksekliği */
+  }
+
+  .featured-title {
+    width: 200px; /* Genişlik */
+  }
+
+  .featured-desc {
+    overflow: hidden; /* Taşma işlemleri gizlendi */
+    display: -webkit-box; /* WebKit motoru için kutu modeli */
+    -webkit-line-clamp: 5; /* WebKit motoru için maksimum satır sayısı */
+    -webkit-box-orient: vertical; /* WebKit motoru için dikey kutu modeli */
+    max-width: 200px; /* Maksimum genişlik */
+    padding: 0; /* İç kenar boşluğu */
+  }
+}
